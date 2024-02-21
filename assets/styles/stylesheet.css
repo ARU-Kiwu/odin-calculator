@@ -1,0 +1,119 @@
+:root {
+    --text-color: white;
+    --black-text-color: black;
+    --calculator-background:#1A212D;
+    --blue-accent:#3a2fb080;
+    --button-color: #38404b6d;
+    --button-secondary-color:#363c454e;
+    --equal-button-color: #DB9EE5;
+    --border: 0.5px solid white;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background: #131922;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--text-color);
+    font-size: 1.025rem;
+    user-select: none;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: var(--calculator-background);
+    width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:7px;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 7px;
+    flex-wrap: wrap;
+}
+
+.input {
+    margin-top: 5px;
+    height: 100px;
+    width: 97.8%;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-bottom: none;
+    border-radius: 7px 7px 0 0;
+    padding:10px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2rem;
+    flex-direction: column;
+}
+
+.input-screen {
+    height: 50px;
+}
+.calculator-buttons {
+    position:relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2px;
+    margin-bottom: 3px;
+}
+.calculator-buttons div{
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    background:var(--button-color);
+    border-radius: 5px;
+}
+
+.calculator-buttons div:hover {
+    background-color: var(--button-secondary-color);
+}
+
+.calculator-buttons .equal {
+    width:202px;
+    background: var(--equal-button-color);
+    color:var(--black-text-color)
+}
+
+.calculator-buttons .equal:hover {
+    background-color: #c388cc;
+}
+
+.pow i {
+    font-style: normal;
+    transform: translateY(-7px);
+    font-size: 13px;
+}
+
+.blur {
+    position: absolute;
+    top:25px;
+    left:200px;
+    height: 200px;
+    width: 200px;
+    background: var(--blue-accent);
+    filter: blur(100px);
+    z-index: -3;
+}
+
+.history {
+   font-size: 1.2rem; 
+   color:#e0e0e0;
+}
